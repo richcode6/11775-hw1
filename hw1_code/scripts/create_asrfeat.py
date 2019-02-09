@@ -54,7 +54,6 @@ def generate_vocab(file, size):
     keys = sorted(v, key=v.get, reverse=True)
     print("Total unique words in training: {}".format(len(keys)))
     size = min(size, len(keys))
-    print("Size of Vocabulary: " + str(size))
     k = 0
     v = {w: v[w]*math.log(doc/df[w]) for w in v}
     keys = sorted(v, key=v.get, reverse=True)
@@ -66,7 +65,8 @@ def generate_vocab(file, size):
                 k += 1
             if k == size:
                 break
-    print("Vocabulary generated successfully ! -> feat/vocab_{}.txt".format(size))
+    print("Size of Vocabulary: " + str(len(vocab)))
+    print("Vocabulary generated successfully ! -> feat/vocab_{}.txt".format(len(vocab)))
     return vocab
 
 
@@ -96,9 +96,9 @@ if __name__ == '__main__':
         df += model_feat[line[0]]
         total_frames += 1
 
-    for id in model_feat:
-       model_feat[id] *= np.log(total_frames / df)
-
+    #for id in model_feat:
+    #   model_feat[id] *= np.log(total_frames / df)
+    
     with open('feat/asr_dict_{}.pickle'.format(len(vocab)), 'wb') as w:
         pickle.dump(model_feat, w)
 
