@@ -27,7 +27,7 @@ if __name__ == '__main__':
     df = numpy.zeros(cluster_num)
     for line in fread.readlines():
         video_id = line.replace('\n', '')
-        mfcc_path = "mfcc_{}f_{}s/".format(frame, step) + video_id + ".mfcc.csv"
+        mfcc_path = "mfcc/" + video_id + ".mfcc.csv"
         i += 1
         if i != 0 and i % 500 == 0:
             print("Processed {} videos.".format(i))
