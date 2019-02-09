@@ -19,7 +19,7 @@ if __name__ == '__main__':
     M = [pickle.load(open(sys.argv[i], 'rb')) for i in range(1, feats+1)]
     dim = [len(M[i][list(M[i])[i]]) for i in range(feats)]
     total = sum(dim)
-    print(total)
+    print("Vector dimensionality -> {}".format(total))
     keys = set().union(*M)
     X = {}
     for key in keys:
