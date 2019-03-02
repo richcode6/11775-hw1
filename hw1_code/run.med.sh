@@ -27,7 +27,6 @@ for event in P001 P002 P003; do
   python scripts/test_classifier.py models/$event.$feat_type.model $feat_dict $feat_dim prediction/${event}_$feat_type.lst list/val || exit 1;
   echo "Testing classifier took $(($(date +'%s') - $start)) seconds"
   # compute the average precision by using sklearn
-  echo "$event ->"
   python scripts/evaluator.py list/${event}_val_label prediction/${event}_$feat_type.lst
 done
 echo "Total time classifier took $(($(date +'%s') - $start1)) seconds"

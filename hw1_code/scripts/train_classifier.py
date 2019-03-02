@@ -48,4 +48,4 @@ if __name__ == '__main__':
     print("Training Accuracy: {}".format(clf.score(X,Y)))
     pickle.dump(clf, open(output_file, 'wb'))
     print("Model for event {} -> {}".format(event_name, output_file))
-    print('SVM trained successfully for event %s!' % event_name)
+    print('Classifier trained successfully for event %s!' % event_name)
