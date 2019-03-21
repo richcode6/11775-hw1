@@ -16,9 +16,13 @@ Parameters:
 
 -k, (boolean) generates Kaggle submission file
 
+
+
  Validation results stored as -> prediction/<event>_<feat_comb>\_EF.lst
  
  Test results stored as -> prediction/<feat_comb>\_EF.csv
+ 
+ 
  
  To perform Late Fusion of a combination say ex. SURF and MFCC, do as below
 ```
@@ -33,9 +37,11 @@ Parameters:
 
 -k, (boolean) generates Kaggle submission file
 
+
  Validation results stored as -> prediction/<event>_<feat_comb>\_LF.lst
  
  Test results stored as -> prediction/<feat_comb>\_LF.csv
+ 
  
  
  To perform Double Fusion of a combination say ex. Late(SURF , MFCC and early(SURF+MFCC)), do as below
