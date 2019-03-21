@@ -16,6 +16,7 @@ for Multimedia-Event Detection
 
 
 Parameters
+
 -p - Boolean, if set to true will preprocess the videos
 
 -f - Boolean, if set to true will perform clustering and create feature representations for the video
